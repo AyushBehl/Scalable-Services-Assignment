@@ -5,3 +5,8 @@ services:
     image: ayushbehl31/sync-dash
     ports: 
       - 3000:3000
+  scalable_backend:
+    image: ayushbehl31/scalable_backend_img
+    ports:
+      - "8000:5000"
+    restart: unless-stopped
